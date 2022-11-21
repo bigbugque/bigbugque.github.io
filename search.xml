@@ -108,15 +108,18 @@ Equations | NexT</a></p>
 <h2 id="hexo-filter-mermaid-diagrams">4.6
 hexo-filter-mermaid-diagrams</h2>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">npm install hexo-filter-mermaid-diagrams --save</span><br></pre></td></tr></table></figure>
-<p>配置<code>next/_config.yml</code>： <img
-src="https://pic.islet.space/2021/12/image-20211227105005422.png" /></p>
+<p>配置<code>next/_config.yml</code>：</p>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">mermaid:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
 <h2 id="search">4.7 search</h2>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">npm install hexo-generator-searchdb --save</span><br></pre></td></tr></table></figure>
-<p>配置<code>next/_config.yml</code>： <img
-src="https://pic.islet.space/2021/12/image-20211227105545754.png" /></p>
-<p>此处的 <code>db.json</code> 需要在 <code>public</code> 文件夹中也有一份的时候启用；如果 <code>db.json</code> 无法使用，则更换为 <code>search.xml</code> 。因为 <code>db.json</code> 或 <code>search.xml</code> 是由插件生成的搜索数据库</p>
-<p><img
-src="https://pic.islet.space/2021/12/image-20211227105510478.png" /></p>
+<p>站点配置文件<code>_config.yml</code>中添加：</p>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="comment">#搜索功能</span></span><br><span class="line"><span class="attr">search:</span></span><br><span class="line">  <span class="attr">path:</span> <span class="string">search.xml</span></span><br><span class="line">  <span class="attr">field:</span> <span class="string">post</span></span><br><span class="line">  <span class="attr">format:</span> <span class="string">html</span></span><br><span class="line">  <span class="attr">limit:</span> <span class="number">1000</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>[!info]
+此处的 <code>db.json</code> 需要在 <code>public</code> 文件夹中也有一份的时候启用；如果 <code>db.json</code> 无法使用，则更换为 <code>search.xml</code> 。因为 <code>db.json</code> 或 <code>search.xml</code> 是由插件生成的搜索数据库</p>
+</blockquote>
+<p>在主题配置文件<code>theme/next/_config.yml</code>中启动local_search：</p>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">local_search:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
         <category>技术</category>
