@@ -8,8 +8,8 @@ subtitle: ''
 description: ''
 keywords:
 author: bigbugque
-language: en
-timezone: ''
+language: zh
+timezone: 'CST'
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
