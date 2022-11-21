@@ -252,10 +252,9 @@ target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_41555408/artic
 
 
       <footer class="post-footer">
-          
           <div class="post-tags">
-              <a href="/tags/math/" rel="tag"><i class="fa-solid fa-tag"></i> math</a>
-              <a href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" rel="tag"><i class="fa-solid fa-tag"></i> 机器学习</a>
+              <a href="/tags/math/" rel="tag"># math</a>
+              <a href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" rel="tag"># 机器学习</a>
           </div>
 
         
@@ -280,6 +279,7 @@ target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_41555408/artic
 
           </div>
           
+    <div class="comments" id="gitalk-container"></div>
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -429,7 +429,7 @@ target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_41555408/artic
 
 
   <script defer src="/lib/three/three.min.js"></script>
-    <script defer src="/lib/three/canvas_lines.min.js"></script>
+    <script defer src="/lib/three/canvas_sphere.min.js"></script>
 
 
   
@@ -521,6 +521,26 @@ if (document.querySelectorAll('pre.mermaid').length) {
     
 
   
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
+
+<script>
+NexT.utils.loadComments(document.querySelector('#gitalk-container'), () => {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js', () => {
+    var gitalk = new Gitalk({
+      clientID    : 'd0c145f5cf4f3af16ef4',
+      clientSecret: '4a963301c5a297e2df881a0d0c0bcb8301161305',
+      repo        : 'bigbugque.github.io',
+      owner       : '',
+      admin       : ['bigbugque'],
+      id          : '05237b3a16a9ac2f9e67eea62ff770ea',
+        language: 'zh-CN',
+      distractionFreeMode: true
+    });
+    gitalk.render('gitalk-container');
+  }, window.Gitalk);
+});
+</script>
 
 </body>
 </html>

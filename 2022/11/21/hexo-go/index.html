@@ -349,9 +349,8 @@ src="https://pic.islet.space/2021/12/image-20211227105510478.png" /></p>
 
 
       <footer class="post-footer">
-          
           <div class="post-tags">
-              <a href="/tags/blog/" rel="tag"><i class="fa-solid fa-tag"></i> blog</a>
+              <a href="/tags/blog/" rel="tag"># blog</a>
           </div>
 
         
@@ -376,6 +375,7 @@ src="https://pic.islet.space/2021/12/image-20211227105510478.png" /></p>
 
           </div>
           
+    <div class="comments" id="gitalk-container"></div>
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -526,7 +526,7 @@ hexo-filter-mermaid-diagrams</span></a></li><li class="nav-item nav-level-2"><a 
 
 
   <script defer src="/lib/three/three.min.js"></script>
-    <script defer src="/lib/three/canvas_lines.min.js"></script>
+    <script defer src="/lib/three/canvas_sphere.min.js"></script>
 
 
   
@@ -618,6 +618,26 @@ if (document.querySelectorAll('pre.mermaid').length) {
     
 
   
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
+
+<script>
+NexT.utils.loadComments(document.querySelector('#gitalk-container'), () => {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js', () => {
+    var gitalk = new Gitalk({
+      clientID    : 'd0c145f5cf4f3af16ef4',
+      clientSecret: '4a963301c5a297e2df881a0d0c0bcb8301161305',
+      repo        : 'bigbugque.github.io',
+      owner       : '',
+      admin       : ['bigbugque'],
+      id          : 'fdbdd3346e0cc3eec86ff198637b07ea',
+        language: 'zh-CN',
+      distractionFreeMode: true
+    });
+    gitalk.render('gitalk-container');
+  }, window.Gitalk);
+});
+</script>
 
 </body>
 </html>
