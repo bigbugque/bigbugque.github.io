@@ -1169,7 +1169,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #01a6a3;
+  background: #2affd1;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -1818,7 +1818,7 @@ pre .javascript .function {
 }
 .posts-expand .post-meta .post-description {
   font-size: 0.875em;
-  margin-top: 2px;
+  visibility: hidden;
 }
 .posts-expand .post-meta time {
   border-bottom: 1px dashed #999;
@@ -2546,6 +2546,18 @@ mjx-container + br {
 .sidebar-button a:hover .far,
 .sidebar-button a:hover .fas {
   color: #e34603;
+}
+.feed-link {
+  margin-top: 10px;
+  border-top: 1px dotted #ccc;
+  border-bottom: 1px dotted #ccc;
+  text-align: center;
+}
+.feed-link a,
+.chat a {
+  display: block;
+  color: #fc6423;
+  border: none !important;
 }
 .links-of-author {
   display: flex;
