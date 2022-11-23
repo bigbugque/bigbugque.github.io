@@ -1331,7 +1331,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #0b7d77;
+  background: #e4fea4;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2612,7 +2612,7 @@ mjx-container + br {
   vertical-align: middle;
 }
 .main-menu .menu-item-active a::after {
-  background: #bbb;
+  background: #283c63;
   border-radius: 50%;
   content: ' ';
   height: 6px;

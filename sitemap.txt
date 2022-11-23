@@ -1,0 +1,15 @@
+http://example.com/2022/11/21/Hexo%20Go/
+http://example.com/2022/11/23/%E4%B8%80%E5%BC%A0%E5%9B%BE%E8%AF%B4Git/
+http://example.com/2022/11/21/%E4%B8%80%E5%85%83%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92/
+http://example.com/categories/index.html
+http://example.com/tags/index.html
+http://example.com/
+http://example.com/tags/math/
+http://example.com/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/
+http://example.com/tags/blog/
+http://example.com/tags/hexo/
+http://example.com/tags/QuickStart/
+http://example.com/tags/git/
+http://example.com/tags/%E4%B8%80%E5%BC%A0%E5%9B%BE/
+http://example.com/categories/python/
+http://example.com/categories/%E6%8A%80%E6%9C%AF/
