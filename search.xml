@@ -1,33 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>一元线性回归</title>
-    <url>/2022/11/21/%E4%B8%80%E5%85%83%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92/</url>
-    <content><![CDATA[<h1 id="预测函数">预测函数</h1>
-<p><span class="math display">\[
-h_{\theta}(x)=\theta_0+\theta_1x_1
-\]</span></p>
-<p>一元线性回归对应的图像为一条直线，称作回归线。其中，<span
-class="math inline">\(\theta_0\)</span> 为截距，<span
-class="math inline">\(\theta_1\)</span> 为斜率</p>
-<h1 id="python">Python</h1>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"></span><br><span class="line"><span class="comment">#载入数据</span></span><br><span class="line">data=np.genfromtxt(<span class="string">&quot;data.csv&quot;</span>,delimiter=<span class="string">&quot;,&quot;</span>)</span><br><span class="line"><span class="comment"># `data[&lt;行&gt;,&lt;列&gt;]`</span></span><br><span class="line"><span class="comment"># `:`左右两边都没数字表示，从0开始一直到结尾</span></span><br><span class="line">x_data=data[:,<span class="number">0</span>] <span class="comment">#表示要所有的行，并且是第一列的数据</span></span><br><span class="line">y_data=data[:,<span class="number">1</span>] <span class="comment"># 表示要所有的行，并且是第二列的数据</span></span><br><span class="line">plt.scatter(x_data,y_data)<span class="comment">#画散点图</span></span><br><span class="line">plt.show()</span><br><span class="line"></span><br><span class="line">lr=<span class="number">0.0001</span><span class="comment">#学习率learning rate</span></span><br><span class="line">b=<span class="number">0</span><span class="comment">#截距</span></span><br><span class="line">k=<span class="number">0</span><span class="comment">#斜率</span></span><br><span class="line">epochs=<span class="number">50</span><span class="comment">#最大迭代次数</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#最小二乘法，即代价函数</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">compute_error</span>(<span class="params">b,k,x_data,y_data</span>):</span><br><span class="line">    totalError=<span class="number">0</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">0</span>,<span class="built_in">len</span>(x_data)):</span><br><span class="line">        totalError+=(y_data[i]-(k*x_data[i]+b))**<span class="number">2</span></span><br><span class="line">    <span class="keyword">return</span> totalError/<span class="built_in">float</span>(<span class="built_in">len</span>(x_data))</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">gradient_descent_runner</span>(<span class="params">x_data, y_data, b, k, lr, epochs</span>):</span><br><span class="line">    m = <span class="built_in">float</span>(<span class="built_in">len</span>(x_data))<span class="comment"># 计算总数据量</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(epochs):<span class="comment"># 循环epochs次</span></span><br><span class="line">        b_grad = <span class="number">0</span></span><br><span class="line">        k_grad = <span class="number">0</span></span><br><span class="line">        <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">0</span>, <span class="built_in">len</span>(x_data)):<span class="comment"># 计算梯度的总和再求平均</span></span><br><span class="line">            b_grad += (<span class="number">1</span>/m) * (((k * x_data[j]) + b) - y_data[j])</span><br><span class="line">            k_grad += (<span class="number">1</span>/m) * x_data[j] * (((k * x_data[j]) + b) - y_data[j])</span><br><span class="line">        b = b - (lr * b_grad)<span class="comment"># 更新b和k</span></span><br><span class="line">        k = k - (lr * k_grad)</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">if</span> i % <span class="number">5</span>==<span class="number">0</span>:<span class="comment"># 每迭代5次，输出一次图像</span></span><br><span class="line">            <span class="built_in">print</span>(<span class="string">&quot;epochs:&quot;</span>,i)</span><br><span class="line">            plt.plot(x_data, y_data, <span class="string">&#x27;b.&#x27;</span>)</span><br><span class="line">            plt.plot(x_data, k*x_data + b, <span class="string">&#x27;r&#x27;</span>)</span><br><span class="line">            plt.show()</span><br><span class="line">            </span><br><span class="line">    <span class="keyword">return</span> b, k</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;Starting b = &#123;0&#125;, k = &#123;1&#125;, error = &#123;2&#125;&quot;</span>.<span class="built_in">format</span>(b, k, compute_error(b, k, x_data, y_data)))</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;Running...&quot;</span>)</span><br><span class="line">b, k = gradient_descent_runner(x_data, y_data, b, k, lr, epochs)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;After &#123;0&#125; iterations b = &#123;1&#125;, k = &#123;2&#125;, error = &#123;3&#125;&quot;</span>.<span class="built_in">format</span>(epochs, b, k, compute_error(b, k, x_data, y_data)))</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<p><a
-href="https://www.bilibili.com/video/BV1Rt411q7WJ?p=7&amp;vd_source=4eac5e3a3f13aec30cb37b8f6d65100e">【线性回归以及非线性回归】2-4.(实战)梯度下降法-一元线性回归_哔哩哔哩_bilibili</a></p>
-<p><a
-href="https://blog.csdn.net/weixin_41555408/article/details/104677806"><code>data[:,0]</code>
-<code>data[1,:]</code>的含义</a></p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#基于sklearn的一元线性回归</span></span><br><span class="line"><span class="keyword">from</span> sklearn.linear_model <span class="keyword">import</span> LinearRegression</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"></span><br><span class="line"><span class="comment"># 载入数据</span></span><br><span class="line">data = np.genfromtxt(<span class="string">&quot;data.csv&quot;</span>, delimiter=<span class="string">&quot;,&quot;</span>)</span><br><span class="line">x_data = data[:,<span class="number">0</span>]</span><br><span class="line">y_data = data[:,<span class="number">1</span>]</span><br><span class="line">plt.scatter(x_data,y_data)</span><br><span class="line">plt.show()</span><br><span class="line"><span class="built_in">print</span>(x_data.shape)</span><br><span class="line"></span><br><span class="line">x_data = data[:,<span class="number">0</span>,np.newaxis]<span class="comment">#np.newaxis加上一个维度，以满足fit()需要的二维数据</span></span><br><span class="line">y_data = data[:,<span class="number">1</span>,np.newaxis]</span><br><span class="line"><span class="comment"># 创建并拟合模型</span></span><br><span class="line">model = LinearRegression()</span><br><span class="line">model.fit(x_data, y_data)<span class="comment">#建模</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 画图</span></span><br><span class="line">plt.plot(x_data, y_data, <span class="string">&#x27;b.&#x27;</span>)</span><br><span class="line">plt.plot(x_data, model.predict(x_data), <span class="string">&#x27;r&#x27;</span>)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>python</category>
-      </categories>
-      <tags>
-        <tag>math</tag>
-        <tag>机器学习</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Hexo Go</title>
     <url>/2022/11/21/Hexo%20Go/</url>
     <content><![CDATA[<p><a
@@ -92,7 +65,7 @@ Elegant and powerful theme for Hexo.</a></p>
 <li>使用 <code>chmod +x hexo_install.sh</code> 命令为其添加执行权限</li>
 <li>使用 <code>./hexo_install.sh</code> 执行脚本</li>
 </ol>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#uninstall the unnecessary renderer,like marked and kramed</span><br><span class="line">sudo npm uninstall hexo-renderer-marked --save</span><br><span class="line">sudo npm uninstall hexo-renderer-kramed --save</span><br><span class="line"></span><br><span class="line">#install the necessary plugins for hexo</span><br><span class="line">sudo npm install @fancyapps/fancybox --save</span><br><span class="line">sudo npm install @fortawesome/fontawesome-free --save</span><br><span class="line">sudo npm install @next-theme/pjax --save</span><br><span class="line">sudo npm install @next-theme/plugins --save</span><br><span class="line">sudo npm install hexo-deployer-git --save</span><br><span class="line">sudo npm install hexo-filter-mermaid-diagrams --save</span><br><span class="line">sudo npm install hexo-generator-searchdb --save</span><br><span class="line">sudo npm install hexo-math --save</span><br><span class="line">sudo npm install hexo-renderer-ejs --save</span><br><span class="line">sudo npm install hexo-renderer-pandoc --save</span><br><span class="line">sudo npm install hexo-renderer-stylus --save</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#uninstall the unnecessary renderer,like marked and kramed</span><br><span class="line">sudo npm uninstall hexo-renderer-marked --save</span><br><span class="line">sudo npm uninstall hexo-renderer-kramed --save</span><br><span class="line"></span><br><span class="line">#install the necessary plugins for hexo</span><br><span class="line">sudo npm install @fancyapps/fancybox --save</span><br><span class="line">sudo npm install @fortawesome/fontawesome-free --save</span><br><span class="line">sudo npm install @next-theme/pjax --save</span><br><span class="line">sudo npm install @next-theme/plugins --save</span><br><span class="line">sudo npm install hexo-deployer-git --save</span><br><span class="line">sudo npm install hexo-filter-mermaid-diagrams --save</span><br><span class="line">sudo npm install hexo-generator-searchdb --save</span><br><span class="line">sudo npm install hexo-math --save</span><br><span class="line">sudo npm install hexo-renderer-ejs --save</span><br><span class="line">sudo npm install hexo-renderer-pandoc --save</span><br><span class="line">sudo npm install hexo-renderer-stylus --save</span><br></pre></td></tr></table></figure>
 <p><a
 href="https://islet.space/2021/12/27/Blog/2021-12-27-hexo%E5%BF%85%E8%A3%85%E6%8F%92%E4%BB%B6/">hexo必装插件及安装脚本
 | Coder的孤岛</a></p>
@@ -124,7 +97,7 @@ converter</a>用于渲染marmaid和latex</p>
 href="https://github.com/jgm/pandoc/releases">pandoc</a>渲染器</li>
 <li>配置<code>next/config.yml</code></li>
 </ol>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">math:    </span><br><span class="line">  every_page: false  </span><br><span class="line">  </span><br><span class="line">  mathjax:  </span><br><span class="line">    enable: true  </span><br><span class="line">    tags: none  </span><br><span class="line">  </span><br><span class="line">  katex:  </span><br><span class="line">    enable: false    </span><br><span class="line">    copy_tex: false</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">math:    </span><br><span class="line">  every_page: false  </span><br><span class="line">  </span><br><span class="line">  mathjax:  </span><br><span class="line">    enable: true  </span><br><span class="line">  </span><br><span class="line">  katex:  </span><br><span class="line">    enable: false    </span><br><span class="line">    copy_tex: false</span><br></pre></td></tr></table></figure>
 <blockquote>
 <p>[!info]
 若要启用pandoc进行渲染，除了之前必须要卸载旧的渲染器（如 <code>marked</code> 和 <code>kramed</code> 外），还需要去github页面下载一个pandoc的渲染器软件并进行安装。</p>
@@ -153,6 +126,101 @@ hexo-filter-mermaid-diagrams</h2>
       </categories>
       <tags>
         <tag>blog</tag>
+        <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>一元线性回归</title>
+    <url>/2022/11/21/%E4%B8%80%E5%85%83%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92/</url>
+    <content><![CDATA[<h1 id="预测函数">预测函数</h1>
+<p><span class="math display">\[
+h_{\theta}(x)=\theta_0+\theta_1x_1
+\]</span></p>
+<p>一元线性回归对应的图像为一条直线，称作回归线。其中，<span
+class="math inline">\(\theta_0\)</span> 为截距，<span
+class="math inline">\(\theta_1\)</span> 为斜率</p>
+<h1 id="python">Python</h1>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"></span><br><span class="line"><span class="comment">#载入数据</span></span><br><span class="line">data=np.genfromtxt(<span class="string">&quot;data.csv&quot;</span>,delimiter=<span class="string">&quot;,&quot;</span>)</span><br><span class="line"><span class="comment"># `data[&lt;行&gt;,&lt;列&gt;]`</span></span><br><span class="line"><span class="comment"># `:`左右两边都没数字表示，从0开始一直到结尾</span></span><br><span class="line">x_data=data[:,<span class="number">0</span>] <span class="comment">#表示要所有的行，并且是第一列的数据</span></span><br><span class="line">y_data=data[:,<span class="number">1</span>] <span class="comment"># 表示要所有的行，并且是第二列的数据</span></span><br><span class="line">plt.scatter(x_data,y_data)<span class="comment">#画散点图</span></span><br><span class="line">plt.show()</span><br><span class="line"></span><br><span class="line">lr=<span class="number">0.0001</span><span class="comment">#学习率learning rate</span></span><br><span class="line">b=<span class="number">0</span><span class="comment">#截距</span></span><br><span class="line">k=<span class="number">0</span><span class="comment">#斜率</span></span><br><span class="line">epochs=<span class="number">50</span><span class="comment">#最大迭代次数</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#最小二乘法，即代价函数</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">compute_error</span>(<span class="params">b,k,x_data,y_data</span>):</span><br><span class="line">    totalError=<span class="number">0</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">0</span>,<span class="built_in">len</span>(x_data)):</span><br><span class="line">        totalError+=(y_data[i]-(k*x_data[i]+b))**<span class="number">2</span></span><br><span class="line">    <span class="keyword">return</span> totalError/<span class="built_in">float</span>(<span class="built_in">len</span>(x_data))</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">gradient_descent_runner</span>(<span class="params">x_data, y_data, b, k, lr, epochs</span>):</span><br><span class="line">    m = <span class="built_in">float</span>(<span class="built_in">len</span>(x_data))<span class="comment"># 计算总数据量</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(epochs):<span class="comment"># 循环epochs次</span></span><br><span class="line">        b_grad = <span class="number">0</span></span><br><span class="line">        k_grad = <span class="number">0</span></span><br><span class="line">        <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">0</span>, <span class="built_in">len</span>(x_data)):<span class="comment"># 计算梯度的总和再求平均</span></span><br><span class="line">            b_grad += (<span class="number">1</span>/m) * (((k * x_data[j]) + b) - y_data[j])</span><br><span class="line">            k_grad += (<span class="number">1</span>/m) * x_data[j] * (((k * x_data[j]) + b) - y_data[j])</span><br><span class="line">        b = b - (lr * b_grad)<span class="comment"># 更新b和k</span></span><br><span class="line">        k = k - (lr * k_grad)</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">if</span> i % <span class="number">5</span>==<span class="number">0</span>:<span class="comment"># 每迭代5次，输出一次图像</span></span><br><span class="line">            <span class="built_in">print</span>(<span class="string">&quot;epochs:&quot;</span>,i)</span><br><span class="line">            plt.plot(x_data, y_data, <span class="string">&#x27;b.&#x27;</span>)</span><br><span class="line">            plt.plot(x_data, k*x_data + b, <span class="string">&#x27;r&#x27;</span>)</span><br><span class="line">            plt.show()</span><br><span class="line">            </span><br><span class="line">    <span class="keyword">return</span> b, k</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;Starting b = &#123;0&#125;, k = &#123;1&#125;, error = &#123;2&#125;&quot;</span>.<span class="built_in">format</span>(b, k, compute_error(b, k, x_data, y_data)))</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;Running...&quot;</span>)</span><br><span class="line">b, k = gradient_descent_runner(x_data, y_data, b, k, lr, epochs)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;After &#123;0&#125; iterations b = &#123;1&#125;, k = &#123;2&#125;, error = &#123;3&#125;&quot;</span>.<span class="built_in">format</span>(epochs, b, k, compute_error(b, k, x_data, y_data)))</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p><a
+href="https://www.bilibili.com/video/BV1Rt411q7WJ?p=7&amp;vd_source=4eac5e3a3f13aec30cb37b8f6d65100e">【线性回归以及非线性回归】2-4.(实战)梯度下降法-一元线性回归_哔哩哔哩_bilibili</a></p>
+<p><a
+href="https://blog.csdn.net/weixin_41555408/article/details/104677806"><code>data[:,0]</code>
+<code>data[1,:]</code>的含义</a></p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#基于sklearn的一元线性回归</span></span><br><span class="line"><span class="keyword">from</span> sklearn.linear_model <span class="keyword">import</span> LinearRegression</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"></span><br><span class="line"><span class="comment"># 载入数据</span></span><br><span class="line">data = np.genfromtxt(<span class="string">&quot;data.csv&quot;</span>, delimiter=<span class="string">&quot;,&quot;</span>)</span><br><span class="line">x_data = data[:,<span class="number">0</span>]</span><br><span class="line">y_data = data[:,<span class="number">1</span>]</span><br><span class="line">plt.scatter(x_data,y_data)</span><br><span class="line">plt.show()</span><br><span class="line"><span class="built_in">print</span>(x_data.shape)</span><br><span class="line"></span><br><span class="line">x_data = data[:,<span class="number">0</span>,np.newaxis]<span class="comment">#np.newaxis加上一个维度，以满足fit()需要的二维数据</span></span><br><span class="line">y_data = data[:,<span class="number">1</span>,np.newaxis]</span><br><span class="line"><span class="comment"># 创建并拟合模型</span></span><br><span class="line">model = LinearRegression()</span><br><span class="line">model.fit(x_data, y_data)<span class="comment">#建模</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 画图</span></span><br><span class="line">plt.plot(x_data, y_data, <span class="string">&#x27;b.&#x27;</span>)</span><br><span class="line">plt.plot(x_data, model.predict(x_data), <span class="string">&#x27;r&#x27;</span>)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>python</category>
+      </categories>
+      <tags>
+        <tag>math</tag>
+        <tag>机器学习</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>【一张图】Git QuickStar</title>
+    <url>/2022/11/23/%E4%B8%80%E5%BC%A0%E5%9B%BE%E8%AF%B4Git/</url>
+    <content><![CDATA[<p><a
+href="https://git-scm.com/book/zh/v1/%E8%B5%B7%E6%AD%A5-%E5%AE%89%E8%A3%85-Git">Git</a>是先进的分布式版本控制系统，而Github是常用的Git代码托管中心
+<span id="more"></span></p>
+<h1 id="git-workflow">1 Git Workflow</h1>
+<pre class="mermaid">sequenceDiagram
+工作区->>暂存区:git add
+暂存区-->>工作区:git rm
+暂存区->>本地库A:git commit
+本地库A-->>暂存区:git reset
+本地库A->>远程库A:git push
+远程库A-->>本地库A: git fetch
+note left of 远程库A:git pull + merge
+远程库A-->>远程库B:fork
+远程库A-->>工作区:clone
+远程库B-->>远程库A:pull request
+note right of 远程库A:审核-->merge</pre>
+<ul>
+<li>工作区：编写的区域</li>
+<li>暂存区：临时存储的区域</li>
+<li>本地库：保存版本信息</li>
+</ul>
+<h1 id="常用指令">2 常用指令</h1>
+<ul>
+<li><code>git init</code>：对所在目录进行本地库的初始化</li>
+<li><code>git config [options]  user.name &lt;user-name&gt;</code>：配置用户名；
+<ul>
+<li>项目级别的配置信息保存的位置为./.git/config</li>
+<li><code>--global</code>：设置为系统用户级别</li>
+</ul></li>
+<li><code>git status</code>：查看工作区与暂存区的状态</li>
+<li><code>git add &lt;file-name&gt;</code>：将工作区“新建/修改”的文件包含到暂存区以便commit</li>
+<li><code>git rm --cached &lt;file&gt;</code>：将暂存区的文件退回到工作区</li>
+<li><code>git commit [options] &lt;file&gt;</code>：将暂存区的内容提交到本地库
+<ul>
+<li><code>-m &lt;context&gt;</code>：设置提交的消息</li>
+</ul></li>
+<li><code>git remote [options]</code>：设置远程仓库
+<ul>
+<li><code>-v</code>：查看远程仓库</li>
+<li><code>add &lt;远程仓库别名&gt; &lt;远程仓库地址&gt;</code>：添加一个远程仓库，并为该远程仓库设定名字</li>
+</ul></li>
+<li><code>git push &lt;远程仓库别名&gt; &lt;分支名&gt;</code>：
+<ul>
+<li><code>git push origin master</code>：将本地的 master 分支推送到
+origin 主机的 master 分支</li>
+</ul></li>
+<li><code>git clone &lt;远程仓库地址&gt;</code>：克隆远程仓库（1.复制远程仓库，2.设置好远程的别名，3.初始化好本地仓库）</li>
+<li><code>git pull &lt;远程库别名&gt; &lt;远程分支&gt;</code>：fetch+merge；拉取远程库
+<ul>
+<li><code>git fetch &lt;远程库别名&gt; &lt;远程的分支&gt;</code></li>
+<li><code>git merge &lt;远程库别名/远程分支&gt;</code></li>
+<li>如果多个push产生冲突，需要先pull下来，解决merge冲突</li>
+</ul></li>
+</ul>
+]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>git</tag>
+        <tag>一张图</tag>
+        <tag>Workflow</tag>
       </tags>
   </entry>
 </search>
