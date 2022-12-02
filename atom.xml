@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2022-11-28T07:56:43.106Z</updated>
+  <updated>2022-12-02T15:00:39.211Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,36 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Hexo添加相关文章</title>
+    <link href="http://example.com/2022/12/02/Hexo%E6%B7%BB%E5%8A%A0%E7%9B%B8%E5%85%B3%E6%96%87%E7%AB%A0/"/>
+    <id>http://example.com/2022/12/02/Hexo%E6%B7%BB%E5%8A%A0%E7%9B%B8%E5%85%B3%E6%96%87%E7%AB%A0/</id>
+    <published>2022-12-02T14:57:15.000Z</published>
+    <updated>2022-12-02T15:00:39.211Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="安装插件">1 安装插件</h1><p>在站点根目录下运行：</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-related-popular-posts --save</span><br></pre></td></tr></table></figure><h1 id="配置插件">2 配置插件</h1><p>在主题配置文件中启用新插件：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">related_posts:</span><br><span class="line">  enable: true</span><br><span class="line">  title: 相关文章 # Custom header, leave empty to use the default one</span><br><span class="line">  display_in_home: false</span><br><span class="line">  params:</span><br><span class="line">    maxCount: 5</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;安装插件&quot;&gt;1 安装插件&lt;/h1&gt;
+&lt;p&gt;在站点根目录下运行：&lt;/p&gt;
+&lt;figure class=&quot;highlight shell&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;</summary>
+      
+    
+    
+    
+    <category term="技术" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+    <category term="blog" scheme="http://example.com/tags/blog/"/>
+    
+    <category term="hexo" scheme="http://example.com/tags/hexo/"/>
+    
+    <category term="插件" scheme="http://example.com/tags/%E6%8F%92%E4%BB%B6/"/>
+    
+  </entry>
   
   <entry>
     <title>【一图说】Git QuickStart</title>
