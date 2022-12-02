@@ -1,25 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Hexo添加相关文章</title>
-    <url>/2022/12/02/Hexo%E6%B7%BB%E5%8A%A0%E7%9B%B8%E5%85%B3%E6%96%87%E7%AB%A0/</url>
-    <content><![CDATA[<h1 id="安装插件">1 安装插件</h1>
-<p>在站点根目录下运行：</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">npm install hexo-related-popular-posts --save</span><br></pre></td></tr></table></figure>
-<h1 id="配置插件">2 配置插件</h1>
-<p>在主题配置文件中启用新插件：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">related_posts:</span><br><span class="line">  enable: true</span><br><span class="line">  title: 相关文章 # Custom header, leave empty to use the default one</span><br><span class="line">  display_in_home: false</span><br><span class="line">  params:</span><br><span class="line">    maxCount: 5</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>技术</category>
-      </categories>
-      <tags>
-        <tag>blog</tag>
-        <tag>hexo</tag>
-        <tag>插件</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Hexo Go</title>
     <url>/2022/11/21/Hexo%20Go/</url>
     <content><![CDATA[<p><a
@@ -147,6 +128,26 @@ hexo-filter-mermaid-diagrams</h2>
         <tag>blog</tag>
         <tag>hexo</tag>
         <tag>QuickStart</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hexo添加相关文章</title>
+    <url>/2022/12/02/Hexo%E6%B7%BB%E5%8A%A0%E7%9B%B8%E5%85%B3%E6%96%87%E7%AB%A0/</url>
+    <content><![CDATA[<h1 id="安装插件">1 安装插件</h1>
+<p>在站点根目录下运行：</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">npm install hexo-related-popular-posts --save</span><br></pre></td></tr></table></figure>
+<span id="more"></span>
+<h1 id="配置插件">2 配置插件</h1>
+<p>在主题配置文件中启用新插件：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">related_posts:</span><br><span class="line">  enable: true</span><br><span class="line">  title: 相关文章 # Custom header, leave empty to use the default one</span><br><span class="line">  display_in_home: false</span><br><span class="line">  params:</span><br><span class="line">    maxCount: 5</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>blog</tag>
+        <tag>hexo</tag>
+        <tag>插件</tag>
       </tags>
   </entry>
   <entry>
