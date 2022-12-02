@@ -2,11 +2,11 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>Yhelo</title>
   
-  <subtitle>人是需要冬眠的ψ(｀∇´)ψ</subtitle>
+  <subtitle>人也是需要冬眠的 ψ(｀∇´)ψ</subtitle>
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2022-11-23T06:25:14.892Z</updated>
+  <updated>2022-11-28T07:56:43.106Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>【一张图】Git QuickStart</title>
+    <title>【一图说】Git QuickStart</title>
     <link href="http://example.com/2022/11/23/%E4%B8%80%E5%BC%A0%E5%9B%BE%E8%AF%B4Git/"/>
     <id>http://example.com/2022/11/23/%E4%B8%80%E5%BC%A0%E5%9B%BE%E8%AF%B4Git/</id>
     <published>2022-11-23T05:56:21.000Z</published>
-    <updated>2022-11-23T06:25:14.892Z</updated>
+    <updated>2022-11-28T07:56:43.106Z</updated>
     
     <content type="html"><![CDATA[<p><ahref="https://git-scm.com/book/zh/v1/%E8%B5%B7%E6%AD%A5-%E5%AE%89%E8%A3%85-Git">Git</a>是先进的分布式版本控制系统，而Github是常用的Git代码托管中心<span id="more"></span></p><h1 id="git-workflow">1 Git Workflow</h1><pre class="mermaid">sequenceDiagram工作区->>暂存区:git add暂存区-->>工作区:git rm暂存区->>本地库:git commit本地库-->>暂存区:git reset本地库->>远程库A:git push远程库A-->>本地库: git fetchnote left of 远程库A:git pull + merge远程库A-->>远程库B:fork远程库A-->>工作区:clone远程库B-->>远程库A:pull requestnote right of 远程库A:审核-->merge</pre><ul><li>工作区：编写的区域</li><li>暂存区：临时存储的区域</li><li>本地库：保存版本信息</li></ul><h1 id="常用指令">2 常用指令</h1><ul><li><code>git init</code>：对所在目录进行本地库的初始化</li><li><code>git config [options]  user.name &lt;user-name&gt;</code>：配置用户名；<ul><li>项目级别的配置信息保存的位置为./.git/config</li><li><code>--global</code>：设置为系统用户级别</li></ul></li><li><code>git status</code>：查看工作区与暂存区的状态</li><li><code>git add &lt;file-name&gt;</code>：将工作区“新建/修改”的文件包含到暂存区以便commit</li><li><code>git rm --cached &lt;file&gt;</code>：将暂存区的文件退回到工作区</li><li><code>git commit [options] &lt;file&gt;</code>：将暂存区的内容提交到本地库<ul><li><code>-m &lt;context&gt;</code>：设置提交的消息</li></ul></li><li><code>git remote [options]</code>：设置远程仓库<ul><li><code>-v</code>：查看远程仓库</li><li><code>add &lt;远程仓库别名&gt; &lt;远程仓库地址&gt;</code>：添加一个远程仓库，并为该远程仓库设定名字</li></ul></li><li><code>git push &lt;远程仓库别名&gt; &lt;分支名&gt;</code>：<ul><li><code>git push origin master</code>：将本地的 master 分支推送到origin 主机的 master 分支</li></ul></li><li><code>git clone &lt;远程仓库地址&gt;</code>：克隆远程仓库（1.复制远程仓库，2.设置好远程的别名，3.初始化好本地仓库）</li><li><code>git pull &lt;远程库别名&gt; &lt;远程分支&gt;</code>：fetch+merge；拉取远程库<ul><li><code>git fetch &lt;远程库别名&gt; &lt;远程的分支&gt;</code></li><li><code>git merge &lt;远程库别名/远程分支&gt;</code></li><li>如果多个push产生冲突，需要先pull下来，解决merge冲突</li></ul></li></ul>]]></content>
     
@@ -38,7 +38,7 @@ href=&quot;https://git-scm.com/book/zh/v1/%E8%B5%B7%E6%AD%A5-%E5%AE%89%E8%A3%85-
     
     <category term="git" scheme="http://example.com/tags/git/"/>
     
-    <category term="一张图" scheme="http://example.com/tags/%E4%B8%80%E5%BC%A0%E5%9B%BE/"/>
+    <category term="一图说" scheme="http://example.com/tags/%E4%B8%80%E5%9B%BE%E8%AF%B4/"/>
     
   </entry>
   

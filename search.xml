@@ -158,7 +158,7 @@ href="https://blog.csdn.net/weixin_41555408/article/details/104677806"><code>dat
       </tags>
   </entry>
   <entry>
-    <title>【一张图】Git QuickStart</title>
+    <title>【一图说】Git QuickStart</title>
     <url>/2022/11/23/%E4%B8%80%E5%BC%A0%E5%9B%BE%E8%AF%B4Git/</url>
     <content><![CDATA[<p><a
 href="https://git-scm.com/book/zh/v1/%E8%B5%B7%E6%AD%A5-%E5%AE%89%E8%A3%85-Git">Git</a>是先进的分布式版本控制系统，而Github是常用的Git代码托管中心
@@ -221,7 +221,7 @@ origin 主机的 master 分支</li>
       <tags>
         <tag>QuickStart</tag>
         <tag>git</tag>
-        <tag>一张图</tag>
+        <tag>一图说</tag>
       </tags>
   </entry>
 </search>
