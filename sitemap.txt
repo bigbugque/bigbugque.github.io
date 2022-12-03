@@ -1,7 +1,7 @@
-http://example.com/2022/12/02/Hexo%E6%B7%BB%E5%8A%A0%E7%9B%B8%E5%85%B3%E6%96%87%E7%AB%A0/
-http://example.com/2022/11/23/%E4%B8%80%E5%BC%A0%E5%9B%BE%E8%AF%B4Git/
-http://example.com/2022/11/21/Hexo%20Go/
-http://example.com/2022/11/21/%E4%B8%80%E5%85%83%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92/
+http://example.com/2022/120247794.html
+http://example.com/2022/112362813.html
+http://example.com/2022/112163758.html
+http://example.com/2022/112133544.html
 http://example.com/categories/index.html
 http://example.com/tags/index.html
 http://example.com/

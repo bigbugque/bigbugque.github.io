@@ -2,7 +2,7 @@
 <search>
   <entry>
     <title>Hexo Go</title>
-    <url>/2022/11/21/Hexo%20Go/</url>
+    <url>/2022/112163758.html</url>
     <content><![CDATA[<p><a
 href="https://hexo.io/zh-cn/">Hexo</a>是一个快速、简洁且高效的博客框架
 <span id="more"></span></p>
@@ -132,14 +132,14 @@ hexo-filter-mermaid-diagrams</h2>
   </entry>
   <entry>
     <title>Hexo添加相关文章</title>
-    <url>/2022/12/02/Hexo%E6%B7%BB%E5%8A%A0%E7%9B%B8%E5%85%B3%E6%96%87%E7%AB%A0/</url>
+    <url>/2022/120247794.html</url>
     <content><![CDATA[<h1 id="安装插件">1 安装插件</h1>
 <p>在站点根目录下运行：</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">npm install hexo-related-popular-posts --save</span><br></pre></td></tr></table></figure>
 <span id="more"></span>
 <h1 id="配置插件">2 配置插件</h1>
 <p>在主题配置文件中启用新插件：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">related_posts:</span><br><span class="line">  enable: true</span><br><span class="line">  title: 相关文章 # Custom header, leave empty to use the default one</span><br><span class="line">  display_in_home: false</span><br><span class="line">  params:</span><br><span class="line">    maxCount: 5</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">related_posts:</span><br><span class="line">  enable: true</span><br><span class="line">  title: 相关文章 # Custom header, leave empty to use the default one</span><br><span class="line">  display_in_home: false</span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
         <category>技术</category>
@@ -152,7 +152,7 @@ hexo-filter-mermaid-diagrams</h2>
   </entry>
   <entry>
     <title>一元线性回归</title>
-    <url>/2022/11/21/%E4%B8%80%E5%85%83%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92/</url>
+    <url>/2022/112133544.html</url>
     <content><![CDATA[<h1 id="预测函数">预测函数</h1>
 <p><span class="math display">\[
 h_{\theta}(x)=\theta_0+\theta_1x_1
@@ -179,7 +179,7 @@ href="https://blog.csdn.net/weixin_41555408/article/details/104677806"><code>dat
   </entry>
   <entry>
     <title>【一图说】Git QuickStart</title>
-    <url>/2022/11/23/%E4%B8%80%E5%BC%A0%E5%9B%BE%E8%AF%B4Git/</url>
+    <url>/2022/112362813.html</url>
     <content><![CDATA[<p><a
 href="https://git-scm.com/book/zh/v1/%E8%B5%B7%E6%AD%A5-%E5%AE%89%E8%A3%85-Git">Git</a>是先进的分布式版本控制系统，而Github是常用的Git代码托管中心
 <span id="more"></span></p>

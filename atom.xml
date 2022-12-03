@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2022-12-02T15:12:42.275Z</updated>
+  <updated>2022-12-02T15:18:17.396Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -18,12 +18,12 @@
   
   <entry>
     <title>Hexo添加相关文章</title>
-    <link href="http://example.com/2022/12/02/Hexo%E6%B7%BB%E5%8A%A0%E7%9B%B8%E5%85%B3%E6%96%87%E7%AB%A0/"/>
-    <id>http://example.com/2022/12/02/Hexo%E6%B7%BB%E5%8A%A0%E7%9B%B8%E5%85%B3%E6%96%87%E7%AB%A0/</id>
+    <link href="http://example.com/2022/120247794.html"/>
+    <id>http://example.com/2022/120247794.html</id>
     <published>2022-12-02T14:57:15.000Z</published>
-    <updated>2022-12-02T15:12:42.275Z</updated>
+    <updated>2022-12-02T15:18:17.396Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="安装插件">1 安装插件</h1><p>在站点根目录下运行：</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-related-popular-posts --save</span><br></pre></td></tr></table></figure><span id="more"></span><h1 id="配置插件">2 配置插件</h1><p>在主题配置文件中启用新插件：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">related_posts:</span><br><span class="line">  enable: true</span><br><span class="line">  title: 相关文章 # Custom header, leave empty to use the default one</span><br><span class="line">  display_in_home: false</span><br><span class="line">  params:</span><br><span class="line">    maxCount: 5</span><br></pre></td></tr></table></figure>]]></content>
+    <content type="html"><![CDATA[<h1 id="安装插件">1 安装插件</h1><p>在站点根目录下运行：</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-related-popular-posts --save</span><br></pre></td></tr></table></figure><span id="more"></span><h1 id="配置插件">2 配置插件</h1><p>在主题配置文件中启用新插件：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">related_posts:</span><br><span class="line">  enable: true</span><br><span class="line">  title: 相关文章 # Custom header, leave empty to use the default one</span><br><span class="line">  display_in_home: false</span><br></pre></td></tr></table></figure>]]></content>
     
     
     <summary type="html">&lt;h1 id=&quot;安装插件&quot;&gt;1 安装插件&lt;/h1&gt;
@@ -45,8 +45,8 @@
   
   <entry>
     <title>【一图说】Git QuickStart</title>
-    <link href="http://example.com/2022/11/23/%E4%B8%80%E5%BC%A0%E5%9B%BE%E8%AF%B4Git/"/>
-    <id>http://example.com/2022/11/23/%E4%B8%80%E5%BC%A0%E5%9B%BE%E8%AF%B4Git/</id>
+    <link href="http://example.com/2022/112362813.html"/>
+    <id>http://example.com/2022/112362813.html</id>
     <published>2022-11-23T05:56:21.000Z</published>
     <updated>2022-11-28T07:56:43.106Z</updated>
     
@@ -71,8 +71,8 @@ href=&quot;https://git-scm.com/book/zh/v1/%E8%B5%B7%E6%AD%A5-%E5%AE%89%E8%A3%85-
   
   <entry>
     <title>一元线性回归</title>
-    <link href="http://example.com/2022/11/21/%E4%B8%80%E5%85%83%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92/"/>
-    <id>http://example.com/2022/11/21/%E4%B8%80%E5%85%83%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92/</id>
+    <link href="http://example.com/2022/112133544.html"/>
+    <id>http://example.com/2022/112133544.html</id>
     <published>2022-11-21T01:37:49.000Z</published>
     <updated>2022-11-21T09:15:10.617Z</updated>
     
@@ -94,8 +94,8 @@ href=&quot;https://git-scm.com/book/zh/v1/%E8%B5%B7%E6%AD%A5-%E5%AE%89%E8%A3%85-
   
   <entry>
     <title>Hexo Go</title>
-    <link href="http://example.com/2022/11/21/Hexo%20Go/"/>
-    <id>http://example.com/2022/11/21/Hexo%20Go/</id>
+    <link href="http://example.com/2022/112163758.html"/>
+    <id>http://example.com/2022/112163758.html</id>
     <published>2022-11-21T00:37:49.000Z</published>
     <updated>2022-11-23T06:31:06.158Z</updated>
     
