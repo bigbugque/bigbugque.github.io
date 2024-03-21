@@ -22,6 +22,10 @@ layout: default
     }
     {% endif %}
 </style>
+<!-- Link Gitalk 的支持文件 -->
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk@latest/dist/gitalk.min.js"></script> 
+
 <header class="intro-header" >
     <div class="header-mask"></div>
     <div class="container">
@@ -187,6 +191,28 @@ layout: default
     })();
 </script>
 <!-- disqus 公共JS代码 end -->
+
+{% endif %}
+
+  <!-- Gitalk 评论 start  -->
+{% if site.disqus_username %}
+  <div id="gitalk-container"></div>
+      <script type="text/javascript">
+      var title = location.pathname.substr(0, 50);//截取路径的前50个字符作为标识符
+      var gitalk = new Gitalk({
+
+      // gitalk的主要参数
+          clientID: `Iv1.7b0ed5b62d140639 `,
+          clientSecret: `e7ac00dc1c751c2899f711a7dff67a03c2865ea3`,
+          repo: `bigbugque.github.io`,
+          owner: 'bigbugque就是你了',
+          admin: ['bigbugque'],
+          id: title,//因为这里不能超过50字符，所以做了处理，当超过50时自动截取前50
+     
+      });
+      gitalk.render('gitalk-container');
+      </script>
+  <!-- Gitalk end -->
 {% endif %}
 
 
