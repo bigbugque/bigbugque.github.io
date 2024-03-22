@@ -219,14 +219,14 @@ layout: default
 <script>
     // mermaid.initialize({startOnLoad:true});
     // 查找 code 标签 且 class 为 language-mermaid，将其转换为 mermaid 语法
-    var codeBlocks = document.querySelectorAll('pre code.language-mermaid');
-    for (var i = 0; i < codeBlocks.length; i++) {
-        // 如果代码块已经有 mermaid 语法，就跳过
-        if (codeBlocks[i].classList.contains('mermaid')) {
-            continue;
-        }
-        codeBlocks[i].className += ' mermaid';
-    }
+    // var codeBlocks = document.querySelectorAll('pre code.language-mermaid');
+    // for (var i = 0; i < codeBlocks.length; i++) {
+    //     // 如果代码块已经有 mermaid 语法，就跳过
+    //     if (codeBlocks[i].classList.contains('mermaid')) {
+    //         continue;
+    //     }
+    //     codeBlocks[i].className += ' mermaid';
+    // }
     if (window.mermaid) {
       mermaid.initialize({theme: 'forest'});
     }
