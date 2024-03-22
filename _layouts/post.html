@@ -216,7 +216,14 @@ layout: default
 
 <!-- 添加mermaid语法支持 -->
 <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
-<script>mermaid.initialize({startOnLoad:true});</script>
+<script>
+    // mermaid.initialize({startOnLoad:true});
+    
+    if (window.mermaid) {
+      mermaid.initialize({theme: 'forest'});
+    }
+  
+</script>
 
 
 <style>
