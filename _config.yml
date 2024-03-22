@@ -21,7 +21,7 @@ RSS: false
 github_username: bigbugque
 # facebook_username:  
 # jianshu_username:   
-twitter_username: bigbugque
+twitter_username: yhelo2022
 
 
 # Build settings
@@ -48,11 +48,11 @@ kramdown:
 
 # 评论系统
 # Disqus（https://disqus.com/）
-# disqus_username: yhelo2022
+disqus_username: yhelo2022
 
 # Gitalk
 gitalk:
-  enable: true    #是否开启Gitalk评论
+  enable: false    #是否开启Gitalk评论
   clientID: Iv1.deabc5542e3f7912                         #生成的clientID
   clientSecret: c24d9140e1cd4a0dbc71386ac764a3500781e80a    #生成的clientSecret
   repo: bigbugque.github.io    #仓库名称
