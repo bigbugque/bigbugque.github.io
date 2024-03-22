@@ -1,11 +1,11 @@
 # Site settings
-title: BY Blog
+title: Yhelo Blog
 SEOTitle: yhelo的博客 | BY Blog
 header-img: img/post-bg-desk.jpg
 email: bigbugque@gmail.com
 description: "我和我的被子难分难舍"
-keyword: "BY, BY Blog, yhelo, bigugque"
-url: "http://bigbugque.github.io"          # your host, for absolute URL
+keyword: "yhelo,yhelo bolg,bigugque"
+url: "https://bigbugque.github.io"          # your host, for absolute URL
 baseurl: ""      # for example, '/blog' if your blog hosted on 'host/blog'
 github_repo: "https://github.com/bigbugque/bigbugque.github.io.git" # you code repository
 
