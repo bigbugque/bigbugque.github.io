@@ -54,7 +54,7 @@ kramdown:
 gitalk:
   enable: true    #是否开启Gitalk评论
   clientID: Iv1.7b0ed5b62d140639                         #生成的clientID
-  clientSecret: e7ac00dc1c751c2899f711a7dff67a03c2865ea3    #生成的clientSecret
+  clientSecret: dee472dc71c81118588dcace5993f4e0ef1fc5cf    #生成的clientSecret
   repo: bigbugque.github.io    #仓库名称
   owner: bigbugque    #github用户名
   admin: bigbugque
