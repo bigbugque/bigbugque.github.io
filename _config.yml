@@ -48,11 +48,11 @@ kramdown:
 
 # 评论系统
 # Disqus（https://disqus.com/）
-# disqus_username: bigbugque
+disqus_username: yhelo2022
 
 # Gitalk
 gitalk:
-  enable: true    #是否开启Gitalk评论
+  enable: false    #是否开启Gitalk评论
   clientID: Iv1.7b0ed5b62d140639                         #生成的clientID
   clientSecret: e7ac00dc1c751c2899f711a7dff67a03c2865ea3    #生成的clientSecret
   repo: bigbugque.github.io    #仓库名称
