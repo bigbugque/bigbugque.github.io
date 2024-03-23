@@ -1,12 +1,13 @@
 ---
 title: this is an example page
 date: 2024-1-28 8:0:00 +0800
-lastUpdateTime: 2024-3-22 23:9:00 +0800
+lastUpdateTime: 2024-3-23 11:54:00 +0800
 name: this-is-an-example-article
 tags: 
     - 测试
     - Test
-categories: life
+    - 技术
+categories: tech
 publish: true
 ---
     
