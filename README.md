@@ -12,10 +12,10 @@
 >我这是简单使用，因此这里也仅作简单介绍，
 >更详细的请参考上级源教程 [qiubaiying/qiubaiying.github.io: BY Blog ->](https://github.com/qiubaiying/qiubaiying.github.io)
  
- ## 使用
+## 使用
 
 ### 开始
-你首先可以 fork 这个仓库 或者 fork 源仓库，然后在给你的新仓库命名为 `<你的Github账号名>.github.io`。
+你首先可以 fork/clone 这个仓库（或者源仓库），然后在给你的新仓库命名为 `<你的Github账号名>.github.io`。
 
 ### 修改配置文件
 
