@@ -109,3 +109,9 @@ friends: [
         href: "https://developer.apple.com/"
     }
 ]
+
+# 解析_post 目录下的所有文章包括子目录
+collections:
+  posts:
+    output: true
+    permalink: /:collection/:path
