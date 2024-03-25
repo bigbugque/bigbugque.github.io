@@ -110,8 +110,4 @@ friends: [
     }
 ]
 
-# 解析_post 目录下的所有文章包括子目录
-collections:
-  posts:
-    output: true
-    permalink: /:collection/:path
+# 解析 _posts 目录包括子目录下的所有 md 文件 
