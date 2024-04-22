@@ -79,7 +79,7 @@ ga_domain: bigbugque.auto               # 默认的是 auto
 
 
 
-
+future: true
 
 # Featured Tags
 featured-tags: true                     # 是否使用首页标签
